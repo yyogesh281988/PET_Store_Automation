@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [PetSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="PetTest(failed)">
+    <classes>
+      <class name="api.test.UserTests">
+        <methods>
+          <include name="setupData"/>
+          <include name="testPostUser"/>
+          <include name="testGetUser"/>
+          <include name="testUpdateUserByName"/>
+          <include name="testDeleteUser"/>
+        </methods>
+      </class> <!-- api.test.UserTests -->
+      <class name="api.test.DataDrivenTest">
+        <methods>
+          <include name="testPostUser" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- api.test.DataDrivenTest -->
+    </classes>
+  </test> <!-- PetTest(failed) -->
+</suite> <!-- Failed suite [PetSuite] -->
